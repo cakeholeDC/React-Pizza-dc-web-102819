@@ -92,9 +92,10 @@ class App extends Component {
         <PizzaForm
         	pizzaForm={ this.state.pizzaForm }
         	onFormChange={ this.onFormChange }
-        	onFormSubmit={ this.onFormSubmit }/>
+        	onFormSubmit={ this.onFormSubmit }
+    	/>
         <PizzaList 
-        	pizzaList={ this.state.pizzaList }
+        	pizzaList={ this.state.pizzaList.sort((a,b) => (a.id > b.id) ? 1 : -1 )}
         	onEditPizza={ this.onEditPizza }
     	/>
       </Fragment>
